@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>File Upload - Drag & Drop</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>File Upload with Drag & Drop</h1>
+
+			<div class="upload-section">
+				<div id="dropZone" class="drop-zone">
+					<div class="drop-zone-content">
+						<svg
+							class="upload-icon"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path
+								d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+							></path>
+							<polyline points="7,10 12,15 17,10"></polyline>
+							<line x1="12" y1="15" x2="12" y2="3"></line>
+						</svg>
+						<p class="drop-text">
+							Drag & drop files here or click to browse
+						</p>
+						<p class="drop-subtext">Maximum file size: 10MB</p>
+					</div>
+					<input
+						type="file"
+						id="fileInput"
+						multiple
+						accept="*/*"
+						style="display: none"
+					/>
+				</div>
+
+				<div id="fileList" class="file-list"></div>
+
+				<button id="uploadBtn" class="upload-btn" disabled>
+					Upload Files
+				</button>
+			</div>
+
+			<div class="uploaded-files-section">
+				<h2>Uploaded Files</h2>
+				<div id="uploadedFilesList" class="uploaded-files-list"></div>
+				<button id="refreshBtn" class="refresh-btn">
+					Refresh List
+				</button>
+			</div>
+		</div>
+
+		<div id="notification" class="notification"></div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
